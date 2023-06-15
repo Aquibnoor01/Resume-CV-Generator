@@ -1,0 +1,225 @@
+<<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body> 
+    <div class="container"  id="cv-form">
+      <h1 class="text-center" my2>Resume Generator</h1>
+      <p class="text-center">Create your own personalised resume</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- first col -->
+          <h3>Personal Information</h3>
+
+          <div class="form-group">
+            <label for="nameField">Your Name</label>
+            <input type="text" id="nameField" placeholder="Enter here"class="form-control">
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="contactField">Phone Number</label>
+            <input type="text" id="contactField" placeholder="your contact"class="form-control">
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="emailField">Email</label>
+            <input type="text" id="emailField" placeholder="your Email Adress"class="form-control">
+          </div>
+
+
+          <div class="form-group mt-2">
+            <label for="adressField">Address</label>
+            <textarea
+              id="adressField" placeholder="Your Adress"class="form-control" row="5">
+            </textarea>
+          </div>
+
+
+
+          <h3 class="text-secondary my-3">Important Links</h3>
+          <div class="form-group mt-2">
+            <label for="LinkField">LinkedIn</label>
+            <input type="text" id="LinkField" placeholder="Enter URL"class="form-control">
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="gitField">Github Link</label>
+            <input type="text" id="gitField " placeholder="Enter URL"class="form-control">
+          </div>
+        </div>
+
+
+
+
+        <div class="col-md-6">
+          <!-- second col -->
+
+          <div class="form-group mt-2"  id="ed">
+            <label for="">Career Profile</label>
+            <textarea 
+            id="objectiveField"
+             placeholder="Enter here" 
+             class="form-control"
+             rows="5"
+             ></textarea>
+           </div>
+
+          
+
+            <div class="form-group mt-2"  id="we">
+             <label for="">Work Experience & Projects</label>
+             <textarea 
+             id="workField"
+              placeholder="Enter here" 
+              class="form-control weField"
+              rows="3"
+              ></textarea>
+              
+              <!--new textarea  -->
+
+              <div class="container text-center mt-2" id="aqAddButton"  >
+                  <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>  
+              </div>
+            </div>
+
+
+            <div class="form-group mt-2"  id="aq">
+              <label for="">Education</label>
+              <textarea 
+              
+               placeholder="Enter here" 
+               class="form-control eqField"
+               rows="3"
+               ></textarea>
+               
+               <div class="container text-center mt-2" id="aqAddButton">
+                   <button 
+                   onclick="addNewAQField()"
+                   class="btn btn-primary btn-sm">Add</button>  
+               </div>
+             </div>
+          </div>
+        </div>
+
+        <div class="container text-center mt-3">
+          <button onclick="GenerateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+      </div> 
+
+   <!-- CV Template -->
+
+      <div class="container" id="cv-template">
+        <div class="row">
+          <div class="col-md-4 text-center py-5 background ">
+            <!-- First col -->
+  
+            <img
+            src="https://th.bing.com/th/id/OIP.9PPdes_WSxaqUQJxWab16AHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt=""
+            class="img-fluid myimg"
+            />
+  
+            <div class="container">
+              <p id="nameT1">Noor Ahmad</p>
+              <p id="contactT">7007625136</p>
+              <p id="emailT">aquib95.bst@gmail.com</p>
+              <p id="adressT">09/D,ScoutPress Basti,Uttar Pradesh</p>
+              <hr>
+              <p ><a id="linkedinT" href="#1">https://www.linkedin.com/in/noor-ahmad-997625222/</a></p>
+              <p><a id="githubT" href="#1">https://github.com/Aquibnoor01</a></p>
+            </div> 
+        </div>
+        
+        <div class="col-md-8 py-5">
+          <!-- Second col -->
+
+          <h1 class="text-center" style="font-weight: 980;" id="nameT2">Noor Ahmad</h1>
+
+          <!-- Ojective cards -->
+          
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Career Profile</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iusto possimus enim praesentium ullam labore assumenda quia doloremque delectus itaque eaque, cumque libero quis earum ipsa sint molestiae quae quos odio laboriosam et, eligendi commodi quo neque. Ullam architecto soluta, labore magnam voluptatem aperiam. Aliquid illo maxime aliquam quod vero!
+              </p>
+            </div>
+
+            <!-- Work Experience -->
+
+            <div class="card mt-4">
+              <div class="card-header background">
+                <h3>Work Experience</h3>
+              </div>
+              <div class="card-body">
+                <ul id="weT">
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                  </li>
+                </ul>
+              </div>
+          </div>
+
+                <!--Education Tab-->
+
+                <div class="card mt-4">
+                  <div class="card-header background">
+                    <h3>Education</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul id="aqT">
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                      </li>
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odit?
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+
+              <div class="container mt-3 text-center">
+                <button onclick="printCV()" class="btn background">
+                  Print CV
+                </button>
+              </div>
+
+
+                </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+  </body>
+</html>
